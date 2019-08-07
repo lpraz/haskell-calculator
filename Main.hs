@@ -1,9 +1,9 @@
 import Calculator (evaluate)
-import Tokenizer (tokenizeRpn)
+import Parser (parse)
 
 calculate :: String -> Maybe Double
 calculate str = do
-    tokens <- tokenizeRpn str
+    tokens <- parse str
     evaluate tokens
 
 main :: IO ()
